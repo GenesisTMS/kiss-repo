@@ -1,0 +1,17 @@
+#!/bin/sh -e
+
+./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --ssl \
+    --sasl \
+    --gnutls \
+    --disable-nls \
+    --disable-idn \
+    --disable-doc \
+    --zlib \
+    --lmdb \
+    --lua
+ 
+make
+make DESTDIR="$1" install

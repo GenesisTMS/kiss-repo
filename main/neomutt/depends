@@ -1,0 +1,5 @@
+cyrus-sasl
+gnutls
+ncurses
+zlib
+lmdb

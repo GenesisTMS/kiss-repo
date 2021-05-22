@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+cd libraries/liblmdb
+make
+
+# The package executables use a static library so it must be created. This
+# command suppresses installation of the static library.
+sed -i 's| liblmdb.a||' Makefile
+
+make prefix=/usr install
