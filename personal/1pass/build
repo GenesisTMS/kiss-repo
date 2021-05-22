@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+install -Dm755 "1pass" "$1/usr/bin/1pass"
+install -Dm644 "bash_completion.sh" "$1/usr/share/1pass/bash_completion.sh"
+install -Dm644 "config.sample" "$1/usr/share/1pass/config.sample"
+install -Dm644 "fuzzpass.fish" "$1/usr/share/1pass/fuzzpass.fish"
+install -Dm644 "fuzzpass.sh" "$1/usr/share/1pass/fuzzpass.sh"

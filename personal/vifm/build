@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+autoreconf -f -i
+
+./configure \
+	--prefix=/usr
+
+make
+make DESTIDR="$1" install
